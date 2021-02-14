@@ -18,7 +18,7 @@ namespace Challenge
 
             
 
-            Point p = new Point(0, 0, "Norte");
+            Point p = new Point(0, 0, Point.NORTE);
 
             foreach (string line in lines)
             {

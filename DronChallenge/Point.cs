@@ -2,6 +2,11 @@
 {
     public class Point
     {
+        public const string OCCIDENTE = "Occidente";
+        public const string ORIENTE = "Oriente";
+        public const string SUR = "Sur";
+        public const string NORTE = "Norte";
+
         public Point(int x, int y, string orientation)
         {
             X = x;
@@ -13,42 +18,42 @@
 
         public int Y { get; set; } = 0;
 
-        public string Orientation { get; set; } = "Norte";
+        public string Orientation { get; set; } = NORTE;
 
         public void Turn(char dir)
         {
             switch (Orientation)
             {
-                case "Norte":
+                case NORTE:
                     {
                         if (dir == 'I')
-                            Orientation = "Occidente";
+                            Orientation = OCCIDENTE;
                         else
-                            Orientation = "Oriente";
+                            Orientation = ORIENTE;
                     }
                     break;
-                case "Sur":
+                case SUR:
                     {
                         if (dir == 'I')
-                            Orientation = "Oriente";
+                            Orientation = ORIENTE;
                         else
-                            Orientation = "Occidente";
+                            Orientation = OCCIDENTE;
                     }
                     break;
-                case "Oriente":
+                case ORIENTE:
                     {
                         if (dir == 'I')
-                            Orientation = "Norte";
+                            Orientation = NORTE;
                         else
-                            Orientation = "Sur";
+                            Orientation = SUR;
                     }
                     break;
                 case "Occidente":
                     {
                         if (dir == 'I')
-                            Orientation = "Sur";
+                            Orientation = SUR;
                         else
-                            Orientation = "Norte";
+                            Orientation = NORTE;
                     }
                     break;
             }
@@ -58,22 +63,22 @@
         {
             switch (Orientation)
             {
-                case "Norte":
+                case NORTE:
                     {
                         Y += 1;
                     }
                     break;
-                case "Sur":
+                case SUR:
                     {
                         Y -= 1;
                     }
                     break;
-                case "Oriente":
+                case ORIENTE:
                     {
                         X += 1;
                     }
                     break;
-                case "Occidente":
+                case OCCIDENTE:
                     {
                         X -= 1;
                     }
